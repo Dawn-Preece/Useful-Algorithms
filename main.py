@@ -27,7 +27,12 @@ def merge_sort (arr: list) -> list:
         a, b = merge_sort(arr[:mid]), merge_sort(arr[mid:])
         c = []
         while a or b:
-            if a[0] < b[0]:
+            if a and b:
+                if a[0] < b[0]:
+                    c.append(a.pop(0))
+                else:
+                    c.append(b.pop(0))
+            elif a:
                 c.append(a.pop(0))
             else:
                 c.append(b.pop(0))
