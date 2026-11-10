@@ -1,4 +1,4 @@
-def bin_search (arr: list, target: float) -> int:
+def binary_search (arr: list, target: float) -> int:
    min = 0
    max = len(arr) - 1
    done = False
@@ -14,6 +14,12 @@ def bin_search (arr: list, target: float) -> int:
        if max == min and arr[min] != target:
            done = True
    return -1
+
+def linear_search (arr: list, target: float) -> int:
+    for i in len (arr):
+        if arr[i] == target:
+            return i
+    return -1 
 
 def merge_sort (arr: list) -> list:
     sorted = True
