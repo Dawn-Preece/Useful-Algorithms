@@ -10,7 +10,6 @@ def binary_search (arr: list, target: float) -> int:
            max = i
        else:
            min = i
-       print (min, max)
        if max == min and arr[min] != target:
            done = True
    return -1
